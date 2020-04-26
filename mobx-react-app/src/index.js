@@ -3,9 +3,9 @@ import ReactDOM from "react-dom";
 import { BrowserRouter } from "react-router-dom";
 import { Provider } from "mobx-react";
 import "./index.css";
-import App from "./components/App/App";
 import * as serviceWorker from "./serviceWorker";
 import rootStore from "./store/RootStore";
+import Route from "./components/Navigation/routes.config";
 
 ReactDOM.render(
   <Provider
@@ -15,7 +15,7 @@ ReactDOM.render(
     sharedStore={rootStore.sharedStore}
   >
     <BrowserRouter>
-      <App />
+      <Route />
     </BrowserRouter>
   </Provider>,
   document.getElementById("root")

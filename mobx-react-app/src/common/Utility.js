@@ -25,4 +25,9 @@ export default {
   clearAllData: () => {
     localStorage.clear();
   },
+
+  isLogin: () => {
+    // fakeAuth = true;
+    return false;
+  },
 };

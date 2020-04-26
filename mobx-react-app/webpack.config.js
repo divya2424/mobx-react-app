@@ -19,7 +19,7 @@ module.exports = {
   },
   resolve: {
     // priority of lookup -> left to right
-    modules: ["src", "node_modules"],
+    modules: ["src", "node_modules", ".js", ".jsx"],
   },
   module: {
     rules: [
