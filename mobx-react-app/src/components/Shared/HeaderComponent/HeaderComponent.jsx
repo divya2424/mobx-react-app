@@ -1,15 +1,13 @@
 import React, { Component } from "react";
 import { withRouter } from "react-router-dom";
+import "./HeaderComponent.scss";
 
-class HeaderComponent extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {};
-  }
-
-  render() {
-    return <React.Fragment>Header Component</React.Fragment>;
-  }
-}
+const HeaderComponent = () => {
+  return (
+    <div>
+      <p className="p-class">Im in Header Ass Component</p>
+    </div>
+  );
+};
 
 export default withRouter(HeaderComponent);

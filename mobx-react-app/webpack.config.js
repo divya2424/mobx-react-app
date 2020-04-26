@@ -14,8 +14,8 @@ module.exports = {
   devServer: {
     historyApiFallback: true,
     inline: true,
-    // contentBase: __dirname + "/dist",
-    // port: 3000,
+    contentBase: __dirname + "/dist",
+    port: 3000,
   },
   resolve: {
     // priority of lookup -> left to right
@@ -35,29 +35,15 @@ module.exports = {
       {
         test: /\.(sa|sc|c)ss$/,
         use: [
-          // devMode ? "style-loader" : MiniCssExtractPlugin.loader,
-          {
-            loader: "css-loader",
-            options: {
-              sourceMap: true,
-              url: true,
-            },
-          },
-          "resolve-url-loader",
-          {
-            loader: "sass-loader",
-            options: {
-              sourceMap: true,
-            },
-          },
-          {
-            loader: "sass-resources-loader",
-            options: {
-              resources: ["src/assets/styles/base.scss"],
-            },
-          },
+          // Creates `style` nodes from JS strings
+          "style-loader",
+          // Translates CSS into CommonJS
+          "css-loader",
+          // Compiles Sass to CSS
+          "sass-loader",
         ],
       },
+
       {
         test: /\.(jpeg|jpg|gif|png)$/i,
         loader: "file-loader",
@@ -79,4 +65,9 @@ module.exports = {
       filename: "index.html",
     }),
   ],
+  watchOptions: {
+    aggregateTimeout: 200,
+    poll: 1000,
+    ignored: ["files/**/*.js", "node_modules/**"],
+  },
 };
