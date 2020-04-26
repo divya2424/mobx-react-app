@@ -1,7 +1,6 @@
 const HtmlWebPackPlugin = require("html-webpack-plugin");
 const path = require("path");
 var SRC_DIR = path.resolve(__dirname, "src");
-console.log("kjsdn", process.env.NODE_ENV);
 
 module.exports = {
   context: __dirname,

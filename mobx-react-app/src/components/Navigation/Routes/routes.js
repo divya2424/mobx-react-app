@@ -1,7 +1,7 @@
 import App from "../../App/App";
 import React from "react";
 
-import PageNotFound from "../../Shared/PageNotFound/PageNotFound";
+import PageNotFound from "../../Shared/PageNotFound/PageNotFound.jsx";
 
 const routes = [
   {

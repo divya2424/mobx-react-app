@@ -5,7 +5,7 @@ import "./HeaderComponent.scss";
 const HeaderComponent = () => {
   return (
     <div>
-      <p className="p-class">Im in Header Ass Component</p>
+      <p className="p-class">Im in Header Component</p>
     </div>
   );
 };
